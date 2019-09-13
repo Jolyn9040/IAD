@@ -19,7 +19,7 @@ $(document).ready(function() {
 		var alphaReg = /^[A-Za-z\s]+$/;
 		var emailReg = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/;
 		
-		if (Surname == "") {
+		if (Surname === "") {
 			errorFree = false;
 			$("#Surname_msg").show();
 		}
@@ -27,7 +27,7 @@ $(document).ready(function() {
 			$("#Surname_msg").hide();
 		}
 		
-		if (Name == "" || !(alphaReg.test(Name))) {
+		if (Name === "" || !(alphaReg.test(Name))) {
 			errorFree = false;
 			$("#name_msg").show();
 		}
@@ -35,7 +35,7 @@ $(document).ready(function() {
 			$("#name_msg").hide();
 		}
 		
-		if (Gender == undefined) {
+		if (Gender === undefined) {
 			errorFree = false;
 			$("#gender_msg").show();
 		}
@@ -43,7 +43,7 @@ $(document).ready(function() {
 			$("#gender_msg").hide();
 		}
 		
-		if (Address == "") {
+		if (Address === "") {
 			errorFree = false;
 			$("#address_msg").show();
 		}
@@ -51,7 +51,7 @@ $(document).ready(function() {
 			$("#address_msg").hide();
 		}
 		
-		if (Email == "" || !(emailReg.test(Email))) {
+		if (Email === "" || !(emailReg.test(Email))) {
 			errorFree = false;
 			$("#email_msg").show();
 		}
@@ -59,7 +59,7 @@ $(document).ready(function() {
 			$("#email_msg").hide();
 		}
 		
-		if (PhoneNo == "" || isNaN(PhoneNo)) {
+		if (PhoneNo === "" || isNaN(PhoneNo)) {
 			errorFree = false;
 			$("#phone_msg").show();
 		}
@@ -118,17 +118,17 @@ $(document).ready(function() {
 		var emailReg = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/;
 		var error = "";
 		
-		if (Surname == "") {
+		if (Surname === "") {
 			errorFree = false;
 			error += "Surname is required.\n";
 		}
 		
-		if (Name == ""  || !(alphaReg.test(Name))) {
+		if (Name === ""  || !(alphaReg.test(Name))) {
 			errorFree = false;
 			error += "Name is required and alphabets only.\n";
 		}
 		
-		if (Gender == "Female" || Gender == "Male") {
+		if (Gender === "Female" || Gender === "Male") {
 			$("#gender_msg").hide();
 		}
 		else {
@@ -136,7 +136,7 @@ $(document).ready(function() {
 			error += "Gender is required and must be Female or Male.\n";
 		}
 		
-		if (Address == "") {
+		if (Address === "") {
 			errorFree = false;
 			error += "Address is required.\n";
 		}
@@ -144,7 +144,7 @@ $(document).ready(function() {
 			$("#address_msg").hide();
 		}
 		
-		if (Email == "" || !(emailReg.test(Email))) {
+		if (Email === "" || !(emailReg.test(Email))) {
 			errorFree = false;
 			error += "Email must be a valid email.\n";
 		}
@@ -152,7 +152,7 @@ $(document).ready(function() {
 			$("#email_msg").hide();
 		}
 		
-		if (PhoneNo == "" || isNaN(PhoneNo)) {
+		if (PhoneNo === "" || isNaN(PhoneNo)) {
 			errorFree = false;
 			error += "Phone must be numeric only.\n";
 		}
